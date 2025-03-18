@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>progress bar</title>
+    <style>
+        .container{
+         width:80%;
+        background-color: gray;
+        margin: 60px auto;
+        border-radius: 70px;
+        }
+       .progress-bar{
+       
+        height: 40px;
+       }
+       .progress-status{
+        width: 100%;
+        border-radius: 70px;
+        height: 40px;
+       }
+       .stage-1{
+        width:20%;
+        background-color: red;
+       }
+       .stage-2{
+        width:40%;
+        background-color: rgb(235, 101, 101);
+       }
+       .stage-3{
+        width:60%;
+        background-color: rgb(134, 185, 56);
+       }
+       .stage-4{
+        width:100%;
+        background-color: green;
+       }
+       /* loader animation */
+      
+       .loader{
+        width:200px;
+        height: 200px;
+        border: 50px solid rgb(204, 194, 194);
+        border-radius: 50%;
+        border-top: 50px solid rgb(193, 221, 212);
+        animation: spin 1.5s infinite;
+       }
+
+       @keyframes spin {
+        100%{
+            transform: rotate(360deg);
+        }
+        
+       }
+       /* animation loader */
+       .container1{
+        width:80%;
+        background-color: gray;
+        margin: 60px auto;
+        border-radius: 70px;
+       }
+       .progress-bar1{
+        height: 40px;
+       }
+       .status{
+        width: 100%;
+        border-radius: 70px;
+        height: 40px;
+        animation: 6s linear spiral infinite;
+       }
+       @keyframes spiral {
+          50%{
+            width:50%;
+            background-color: blue;
+          }
+          75%{
+            width:75%;
+            background-color: red;
+          }
+          100%{
+            width:100%;
+            background-color: green;
+          }
+       }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="progress-bar">
+            <div class="progress-status stage-2"></div>
+        </div>
+    </div>
+    <!-- loader animation -->
+    <div class="contain">
+        <div class="loader"></div>
+    </div>
+    <!-- animation loader -->
+    <div class="container1">
+        <div class="progress-bar1">
+            <div class="status"></div>
+        </div>
+    </div>
+</body>
+</html>

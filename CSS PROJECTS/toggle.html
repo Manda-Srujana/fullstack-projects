@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle switch</title>
+    <style>
+   .toggle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+   }
+   label{
+    width: 100px;
+    height: 40px;
+    border: 3px solid black;
+    border-radius: 40px;
+    padding: .25rem;
+   }
+   .togg-input{
+    display: none;
+   }
+   .togg-switch{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: black;
+    transition: all .5s;
+   }
+   .togg-input:checked~ .togg-switch{
+    transform: translateX(calc(100px - 40px));
+   }
+    </style>
+</head>
+<body>
+    <div class="toggle">
+        <label for="togg">
+            <input id="togg" type="checkbox" class="togg-input">
+            <div class="togg-switch"></div>
+        </label>
+    
+    </div>
+</body>
+</html>

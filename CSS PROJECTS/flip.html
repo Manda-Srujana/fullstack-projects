@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card flip</title>
+    <style>
+      body{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+      }
+      .card{
+        height: 250px;
+        width:300px;
+        border-radius: 26px;
+        background-color: #0000ffe8;
+        color: white;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 45px;
+        padding: 5px;
+        font-size: 18px;
+        transition: transform ease-in-out 0.3s;
+        transform-style: preserve-3d;
+      }
+      h2{
+        background-color: yellow;
+        color: black;
+        border-radius: 13px;
+        padding: 10px;
+      }
+      .card-back{
+        display: none;
+        background-color: #0000ffc9; 
+      }
+      .card:hover{
+        transform: rotateY(180deg);
+      }
+      .card:hover .card-front{
+        display: none;
+      }
+      .card:hover .card-back{
+            display: block;
+            transform: rotateY(180deg);    
+      }
+      .card-front,.card-back{
+        backface-visibility: hidden;
+        margin: 10px;
+        padding: 3px;
+      }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-front">
+            <h2>Hii,Turn the card</h2>
+        </div>
+        <div class="card-back">
+            <h2>Have a Good day</h2>
+        </div>
+    </div>
+</body>
+</html>

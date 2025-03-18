@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .container{
+            width:400px;
+            height: 400px;
+            border: 5px solid blue;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .box{
+            font-size: 50px;
+            border-radius: 30px;
+            margin: 10px;
+            font-weight: 700;
+            text-align: center;
+            height: 100px;
+            width: 100px;
+            background-color: gray;
+            border:5px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        } 
+        .navbar{
+            margin-top:20px;
+            height:50px;
+            width:900px;
+            background-color: pink;
+            border: 2px solid blue;
+            border-radius:30px;
+            display:flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .options{
+          margin:10px;
+        }
+       
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+        <div class="box">D</div>
+        <div class="box">E</div>
+        <div class="box">F</div>
+        <div class="box">G</div>
+        <div class="box">H</div>
+        <div class="box">I</div>
+    </div>
+    <!--Assignment 2-->
+     <div class="navbar">
+        <div class="options">Logo</div>
+        <div class="options">Home</div>
+        <div class="options">Contact</div>
+        <div class="options">About</div>
+        </div>
+       
+   
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Resume</title>
+    <style>
+      body{
+        background-color: black;
+        font-family: sans-serif;
+      }
+      .container{
+        background-color: rgb(22, 21, 21);
+        border-radius:20px ;
+        max-width:1000px;
+        width:80%;
+        color:white;
+        margin: 0 auto;
+        display:grid;
+        grid-column-gap: 20px;
+        grid-row-gap: 3px;
+      }   
+      .omg1{
+        margin:30px auto;
+      } 
+      .omg{
+        margin:2px;
+      }
+      img{
+        border-radius: 50%;
+        height: 198px;
+        width: 176px;
+        object-position: unset;
+        object-fit: cover;   
+      }
+      img:hover{
+        border: 1px solid orangered;
+      }
+     
+      h1{
+        color:white;
+        font-weight: 400;
+        font-size: 36px;
+      }
+      h1 span{
+        color: rgba(243, 97, 0, 0.6);
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin: 10px 6px 6px 10px;
+        
+      }
+      
+      a{
+        color:white;
+      }
+      a:hover{
+        color:rgba(243, 97, 0, 0.6);
+      }
+      
+      h2{
+        color: rgba(243, 97, 0, 0.6);
+        margin-left:10px;
+      }
+      h2:hover{
+        text-decoration: underline;
+        font-size: 30px;
+        letter-spacing: 3px;
+      }
+
+      @media (max-width:800px) {
+        .container{
+          display: flex;
+          flex-wrap: wrap;
+        }
+      
+      .omg1{
+        margin: 5px auto;
+      }
+      
+      h1 span{
+        margin:3px;
+      }
+      img{
+        margin:10px auto;
+      }
+        .info{
+          margin: 10px;
+        }
+      }
+      .section9{
+        margin: 0;
+        bottom: 20px;
+        display: grid;
+        place-items: center;
+        grid-row: span 1;
+        grid-column: span 2;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+     
+        <div class="section1 omg1">
+            <img src="./photo.jpg">
+        </div>
+
+        <div class="section2 omg">
+          <div class="info">
+            <h1>Manda <br> <span>Srujana</span></h1>
+            <h4>Fullstack Developer</h4>
+            <p>I want pursue my carrer towards the development journey. </p>
+            <a href="#">Download resume</a>
+            </div>
+        </div>
+        <div class="section3 omg">
+          <h2>Education:</h2>
+          <ul>
+            <li>Rajiv Gandhi University Of Knowledge Technologies , CGPA: 8.37</li><br>
+            <li>Rajiv Gandhi University of Knowledge Technologies (PUC), CGPA:8.99</li><br>
+            <li>Zphs Appanapet , CGPA:10</li><br>
+          </ul>
+        </div>
+        <div class="section4 omg">
+          <h2>Skills:</h2>
+          <ul>
+            <li>C language</li><br>
+            <li>HTML</li><br>
+            <li>CSS</li><br>
+            <li>Javascript</li><br>
+            <li>Python</li><br>
+          </ul>
+        </div>
+       
+        <div class="section5 omg">
+          <h2>Projects:</h2>
+          <ul>
+            <li>PinchOfYum Clone , Technologies used : HTML,CSS </li><br>
+            <li>Amazon Clone , Technologies Used : HTML,CSS</li><br>
+            <li>Spotify Clone , Technologies USed : HTML,CSS</li><br>
+            <li>Sidebar Menu , Technologies USed : HTML,CSS</li><br>
+            <li>To Do List , Technologies Used : HTMl,JS</li><br>
+            <li>Simons Says Game , Technologies Used : HTML,CSS,JS</li><br>
+        </ul>
+        </div>
+     
+        <div class="section6 omg">
+          <h2>Acheivements:</h2>
+          <ul>
+            <li>Participated in Overnight Hackathon qualified upto 2 rounds- E-cell,RGUKT BASAR</li>
+            <br>
+            <br>
+            <li>Member of E-cell</li>
+            <br><br>
+            <li>Participated in CodeClub event and qualified upto semi-finals.</li>
+            <br><br>
+        </ul>
+        </div>
+        <div class="section7 omg">
+          <h2>Hobbies:</h2>
+          <ul>
+            <li>Playing Badminton</li><br>
+            <li>Playing TableTennis</li><br>
+          </ul>
+        </div>
+        <div class="section8 omg">
+          <h2>Certificates:</h2>
+          <ul>
+            <li>Fullstack developer certified by MindSparc Associations</li>
+          </ul>
+        </div>
+        <div class="section9">
+          <h2>Contacts:</h2>
+          <ul>
+            <li>Email:<a href="#">srujanamanda256@gmail.com</a></li><br>
+            <li>Mobile:<a href="#">7989520010</a></li><br>
+          </ul>
+         </div>
+       </div>
+      
+      
+
+    </div>
+</body>
+</html>

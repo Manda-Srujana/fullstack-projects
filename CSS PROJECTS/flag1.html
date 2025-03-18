@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flag1</title>
+    <style>
+        :root{
+        --height:150px;
+        }
+        body{
+            background-color: black;
+        }
+        /* france */
+        .flag{
+            height:150px;
+            width:calc(var(--height)*(3/2));
+            background-color: black;
+            margin: 2em auto;
+            display: flex;/*display: grid; */
+            /* grid-template-columns: repeat(3,1fr); */
+        }
+        .red{
+           background-color: red;
+        }
+        .white{
+            background-color: white;
+        }
+        .blue{
+            background-color: blue;
+        }
+        /* second flag */
+        .flags{
+            height:150px;
+            width:calc(var(--height)*(5/3));
+            background-color: black;
+            margin: 2em auto;
+            display: flex;
+            flex-direction: column;
+            /* background-color: white; */
+        }
+        .strip{
+            flex-grow: 1;
+        }
+        .black{
+            background-color: black;
+        }
+        .reds{
+            background-color: red;
+        }
+        .yellow{
+            background-color: yellow; 
+        }
+        /* third flag */
+        .flagss{
+            height:150px;
+            width:calc(var(--height)*(3/2));
+            background-color: black;
+            margin: 2em auto;
+            display: flex;
+        }
+        .strip{
+            flex-grow: 1;
+        }
+        .white{
+            background-color: #fff;
+            width:calc(var(--height)/2);
+            height: var(--height);
+        }
+        .merge .redss{
+            background-color: red;
+            height: calc(var(--height)/2);
+            width: calc(var(--height));
+        }
+        .merge .green{
+            background-color: green;
+            height: calc(var(--height)/2);
+        }
+        /* switzerland */
+        .flagsss{
+            height:200px;
+            width:200px;
+            background-color:red;
+            margin: 2em auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .cross{
+            height:calc(var(--height)*(3/16));
+            width: calc(var(--height)*(5/8));
+            background-color: #fff;
+        }
+        .cross2{
+           transform: rotate(90deg);
+            position: absolute;
+        }
+        /*japan */
+        .flaggs{
+            height:calc(var(--height));
+            width:calc(var(--height)*(3/2));
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2em auto;
+        }
+        .redd{
+            height:calc(var(--height)*(3/5));
+            width:calc(var(--height)*(3/5));
+            border-radius: 50%;
+            background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* sweden */
+        .flaggss{
+            height:calc(var(--height));
+            width: calc(var(--height)*(8/5));
+            background-color: blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2em auto;
+            position: relative;
+        }
+        .crosss{
+            height:calc(var(--height)*(1/5));
+            background-color: yellow;
+        }
+         .crosss1{
+            align-self: center;
+            width: 100%;
+        }
+        .crosss2{
+            width:calc(var(--height));
+            position: absolute;
+            transform: rotate(90deg);
+            top: calc(var(--height)*(4/10));
+            right: calc(var(--height)*(5/16));
+        }
+        
+
+    </style>
+</head>
+<body>
+    <!-- france -->
+    <div class="flag">
+        <div class="red strip"></div>
+        <div class="white strip"></div>
+        <div class="blue strip"></div>
+    </div>
+    <!-- germany -->
+    <div class="flags">
+        <div class="black strip"></div>
+        <div class="reds strip"></div>
+        <div class="yellow strip"></div>
+    </div>
+    <!-- madagascar -->
+    <div class="flagss">
+        <div class="white strip"></div>
+       <div class="merge">
+        <div class="redss strip"></div>
+        <div class="green strip"></div>
+       </div>
+    </div>
+    <!-- switzerland -->
+    <div class="flagsss">
+       <div class="cross"></div>
+       <div class="cross2 cross"></div>
+    </div>
+    <!-- japan -->
+    <div class="flaggs">
+        <div class="redd"></div>
+    </div>
+    <!-- sewden -->
+    <div class="flaggss">
+        <div class="crosss crosss1"></div>
+        <div class="crosss2 crosss"></div>
+     </div>
+     <!-- niger -->
+    
+
+
+    
+
+
+</body>
+</html>

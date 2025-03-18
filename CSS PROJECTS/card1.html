@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cards</title>
+    <style>
+        body{
+            --card-height:200px;
+        }
+        .card{
+            border:1px solid black;
+            width:calc(var(--card-height)*2/3);
+            height: var(--card-height);
+            border-radius: 3px;
+            display: grid;
+        }
+        .left >div:first-child,.right >div:first-child{
+            padding-left: 2px;
+        }
+        /* 1st card */
+        .top{
+            padding: 0.5rem;
+            font-size: 17px;
+        }
+        .center{
+            font-size: 2em; 
+            display: flex;
+            align-items: center;
+            justify-content: center;  
+        }
+        .bottom{
+            font-size: 17px;
+            padding: 0.5rem;
+            transform: rotate(180deg);
+        }
+        /* card2 */
+        .card1{
+            border:1px solid black;
+            width:calc(var(--card-height)*2/3);
+            height: var(--card-height);
+            border-radius: 3px;
+            display: grid;
+            grid-template-columns: 10% 80% 10%;
+            margin: 3px;
+            color: red;
+        }
+        .center1{
+            font-size: 3em; 
+            display: grid;
+            grid-template-columns: 50% 50%;
+            align-items: center;
+            text-align: center;
+        }
+        .center :nth-child(3),.center :nth-child(4){
+            transform:rotate(180deg);
+            /* transform:scaleY(-1); */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- card1 -->
+        <div class="card">
+            <div class="top">
+                <div>A</div>
+                <div>&spades;</div>
+            </div>
+            <div class="center">
+                &spades;
+            </div>
+            <div class="bottom">
+                <div>A</div>
+                <div>&spades;</div>
+            </div>
+        </div>
+        <!-- card2 -->
+        <div class="card1">
+            <div class="top">
+                <div>A</div>
+                <div>&hearts;</div>
+            </div>
+            <div class="center1">
+                <div>&hearts;</div>
+                <div>&hearts;</div>
+                <div>&hearts;</div>
+                <div>&hearts;</div>
+            </div>
+            <div class="bottom">
+                <div>A</div>
+                <div>&hearts;</div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

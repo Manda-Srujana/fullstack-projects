@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search bar</title>
+    <style>
+        h1{
+            font-size: 45px;
+            text-align: center;
+        }
+       input{
+        display: block;
+        margin:20px;
+        width: 10%;
+        padding: 20px;
+        border: 2px solid black;
+       }
+       input:focus{
+        border:  1px solid blue;
+        width: 80%;
+       }
+       input:focus::placeholder{
+        width:100%;
+        font-size: 22px;
+        color: transparent;
+       }
+
+    </style>
+</head>
+<body>
+    <h1>Search Daily Task</h1>
+    <input type="text" placeholder="Search1...">
+    <input type="text" placeholder="Search2...">
+    <input type="text" placeholder="Search3...">
+    <input type="text" placeholder="Search4...">
+</body>
+</html>

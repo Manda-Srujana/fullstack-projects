@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flag2</title>
+    <style>
+         /* niger */
+         :root{
+            --height:150px;
+            background-color: black;
+         }
+         .flaggsss{
+            /* display: flex;
+            align-items: center;
+            justify-content: center; */
+            width: calc(var(--height)*(7/6));
+            height: calc(var(--height));
+            margin: 1em auto;
+            background-color: #fff;
+            display: grid;
+            margin-top: 200px;
+            /* position: relative; */
+        }
+        .orange{
+            background-color: orangered;
+        }
+        .whites{
+            background-color: #fff;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+        }
+        .greenn{
+            background-color: green;
+        }
+        .strip{
+            flex-grow: 1;
+        }
+        .orangee{
+            width:calc(var(--height)/3*(.86));
+            height: calc(var(--height)/3*(.86));
+            background-color: orangered;
+            border-radius: 50%;
+            position: absolute;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <!-- niger -->
+    <div class="flaggsss">
+        <div class="orange strip"></div>
+        <div class="whites strip">
+            <div class="orangee"></div>
+        </div>
+     <div class=" greenn strip"></div>
+
+     </div>
+</body>
+</html>

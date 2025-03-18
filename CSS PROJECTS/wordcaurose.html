@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>word caraouse</title>
+    <style>
+        .type{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 100px;
+        }
+        h3{
+            font-size: 53px;
+        }
+        h3:after{
+            content:"";
+            background-color: blue;
+            padding:10px;
+            color: white;
+            border-radius: 4px;
+            animation: 6s swap infinite;
+        }
+        @keyframes swap{
+            0%{
+                content:"reading";
+            }
+            20%{
+                content:"drawing";  
+            }
+            30%{
+                content:"chatting";
+            }
+            40%{
+                content:"typing";
+            }
+            50%{
+                content:"writting";   
+            }
+            60%{
+                content:"music"; 
+            }
+            70%{
+                content:"sleeping ";
+            }
+            80%{
+                content:"managing";
+            }
+            90%{
+                content:"photography"
+            }
+            100%{
+                content:"coding";
+            }
+        }
+
+    </style>
+</head>
+<body>
+   <div class="type">
+    <h3>I love </h3>
+   </div>
+</body>
+</html>

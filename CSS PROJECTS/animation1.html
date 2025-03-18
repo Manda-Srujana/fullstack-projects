@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation1</title>
+    <style>
+     .circle{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height:1.5vh;
+        margin-top: 200px;
+     }
+     .round{
+        height: 1.5rem;
+        width: 1.5rem;
+        margin: 5px;
+        border-radius: 50%;
+        animation: pulse infinite 1s;
+     }
+     @keyframes pulse{
+        from{
+            background-color: rgb(156, 153, 153);
+        }
+        to{
+            background-color: rgb(87, 83, 83);
+        }
+     }
+    </style>
+</head>
+<body>
+    <div class="circle">
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+    </div>
+</body>
+</html>
