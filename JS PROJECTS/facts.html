@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat facts</title>
+</head>
+<style>
+    body{
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .container{
+        margin: 10px auto;
+        padding: 5px;
+        height:300px;
+        width:600px;
+        border: 3px solid black;
+        border-radius: 8px;
+        margin-top: 100px;
+    }
+    h1{
+        letter-spacing: 3px;
+        font-weight: 600;
+    }
+    button{
+        padding: 10px;
+        font-size: 20px;
+        background-color: black;
+        color: white;
+        border-radius: 3px;
+        border: none;
+    }
+    button:hover{
+        border: 2px solid gray;
+    }
+    #res{
+     font-size: 22px;
+    }
+</style>
+<body>
+    <div class="container">
+    <h1>Random Cat Facts</h1>
+    <button>Get Facts</button>
+    <br>
+    <p id="res"></p>
+    </div>
+    <script>
+     let btn = document.querySelector("button");
+     let result = document.querySelector("#res");
+
+     btn.addEventListener("click", async ()=>{
+        console.log("btn was clicked");
+        let fact = await getFacts();
+        result.innerText = fact;
+    })
+
+     let url="https://catfact.ninja/fact";
+     async function getFacts(){
+         try{
+            let res1 = await fetch(url);
+            let data1 = await res1.json();
+            // console.log(data1);
+            // console.log(data1.fact);
+            return data1.fact;
+
+         }
+         catch(e){
+            console.log("error caught",e);
+            return "No Fact found";
+         }
+     }
+
+
+
+    </script>
+</body>
+</html>

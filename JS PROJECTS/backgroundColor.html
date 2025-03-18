@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background color changer</title>
+    <style>
+     body{
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     }
+     .button{
+        height:200px;
+        width:200px;
+        border: 4px solid black;
+        border-radius: 10px;
+        margin:0 auto;
+    }
+    div{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-top:20px;
+        padding: 3px;
+    }
+    #pink{
+        background-color: #ffc0cbf8;
+    }
+    #yellow{
+        background-color: #ffff00b0;
+    }
+    #green{
+        background-color: #008000cc;
+    }
+    #blue{
+        background-color: #0000ffc2;
+    }
+    </style>
+</head>
+<body>
+    <h1>Background Color Changer</h1>
+    <h4>Change the Color by clicking any of the box color to background color</h4>
+    <div>
+        <div class="button" id="pink"></div>
+        <div class="button" id="yellow"></div>
+        <div class="button" id="blue"></div>
+        <div class="button" id="green"></div>
+    </div>
+
+    <script>
+
+        let btn = document.querySelectorAll(".button");
+        let body = document.querySelector("body");
+
+         
+        btn.forEach(function (box){
+            // console.log(box);
+            box.addEventListener("click",(e)=>{
+                // console.log("btn was clicked");
+                // console.log(e.target);
+                // console.log(e.target.id);
+                body.style.backgroundColor = e.target.id;
+            })
+        })
+
+    </script>
+</body>
+</html>

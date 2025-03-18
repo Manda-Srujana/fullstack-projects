@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To DO app</title>
+    <style>
+      body{
+        
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+      .container{
+        padding: 10px;
+        width:500px;
+        border: 5px solid black;
+        border-radius: 10px;
+        margin: 0 auto;
+        margin-top: 50px;
+      }
+      h1{
+        text-align: center;
+      }
+      input{
+        padding:10px;
+        font-size: 22px;
+        border: 1px solid grey;
+        border-radius: 8px;
+        margin: 2px;
+        width:70%;
+      }
+      button{
+        background-color: rgba(0, 128, 0, 0.842);
+        padding: 11px 20px;
+        border: 1px solid green;
+        font-size: 20px;
+        margin: 3px;
+        border-radius: 8px;
+      }
+      .items{
+        font-size: 24px;
+        margin: 10px;
+      }
+      .buttons{
+        background-color: rgba(255, 0, 0, 0.842);
+        padding: 11px 20px;
+        border: 1px solid rgba(255, 0, 0, 0.815);
+        font-size: 20px;
+        border-radius: 8px;
+        text-align: end;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>To Do App</h1>
+        <input type="text" placeholder="Enter Task"/>
+        <button>Add</button>
+        <ul></ul>
+    </div>
+
+    <script>
+
+      let todo = [];
+
+      let btn = document.querySelector("button");
+      let input = document.querySelector("input");
+      let ul = document.querySelector("ul");
+
+      btn.addEventListener("click",()=>{
+        // console.log("btn was clicked");
+
+        let item = input.value;
+        console.log(item);
+
+        let li = document.createElement("li");
+        let button = document.createElement("button");
+        button.classList.add("buttons");
+        li.classList.add("items");
+
+        button.innerText = "Delete";
+        li.innerText = item;
+  
+        ul.appendChild(li);
+        li.appendChild(button);
+
+        input.value="";
+      });
+
+      ul.addEventListener("click",(e)=>{
+        if(e.target.nodeName == "BUTTON"){
+            console.log(e.target.nodeName);
+            let listItem = e.target.parentElement;
+            console.log(listItem);
+            listItem.remove();
+        }
+      })
+
+     
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogs Images</title>
+    <style>
+      body{
+         text-align: center;
+         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+      .container{
+        height:550px;
+        width:600px;
+        margin: 10px auto;
+        margin-top: 90px;
+        border: 3px solid black;
+        border-radius: 8px;
+        text-align: center;
+      }
+      button{
+        padding:10px;
+        margin:10px;
+        border: none;
+        background-color: black;
+        color:white;
+        font-size: 22px;
+        border-radius: 3px;
+      }
+      .color{
+        height: 350px;
+        width:500px;
+        border: 6px solid #2e2d2d;
+        object-fit: cover;
+        border-radius: 10%;
+      }
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Dogs Image</h1>
+        <button>Show</button>
+        <br>
+        <img id="image">
+    </div>
+    <script>
+    
+    let btn = document.querySelector('button');
+    let img = document.querySelector("img");
+
+    btn.addEventListener("click",async ()=>{
+        console.log("btn was clicked");
+        let link = await showImage();
+        img.classList.add("color");
+      
+     
+        img.setAttribute("src",link);
+        console.log(link);
+
+ 
+    });
+    
+    let url = "https://dog.ceo/api/breeds/image/random"
+
+   async function showImage(){
+       try{
+          let res1 = await fetch(url);
+          let data1 = await res1.json();
+          console.log(res1);
+          console.log(data1);
+          console.log(data1.message);
+         return data1.message;
+         
+       }
+       catch(e){
+        return "/";
+       }
+    }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI calculator</title>
+    <style>
+     body{
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+     }
+     .container{
+        width: 400px;
+        border: 3px solid black;
+        border-radius: 8px;
+        margin: 5px auto;
+        margin-top:20px;
+     }
+     h1{
+        letter-spacing: 2px;
+     }
+     input{
+        width:55%;
+        padding: 9px;
+        font-size: 20px;
+        border: 1px solid grey;
+        border-radius: 5px;
+        margin-left: 3px;
+        margin-top: 3px;
+     }
+     p{
+        font-size: 23px;
+        margin: 3px;
+     }
+     button{
+        padding: 12px;
+        font-size: 20px;
+        background-color: black;
+        color: white;
+        border: 1px solid black;
+        border-radius: 7px;
+        margin: 5px;
+     }
+     .description{
+        text-align: center;
+        margin: 8px;
+        font-size: 20px;
+     }
+     .res{
+        font-size: 23px;
+        font-weight: 500;
+     }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>BMI APP</h1>
+       <form action="#">
+        <p><label for="text">Height in cm:</label><input type="text" id="text" placeholder="Enter Height"></p>
+        <p><label for="texts">Weight in cm:</label><input type="text" id="texts" placeholder="Enter Weight"></p>
+        <button>Calculate</button>
+        <div class="res"></div>
+        <div class="description">
+            <h2>BMI Overview:</h2>
+            <p>Over weight: Less than 18.6</p>
+            <p>Normal weight: 18.6 - 24.9</p>
+            <p>Under Weight: More than 24.9</p>
+        </div>
+       </form>
+    </div>
+
+    <script>
+
+        let btn = document.querySelector("button");
+        let res = document.querySelector(".res");
+        let form = document.querySelector("form");
+
+        form.addEventListener("submit",(e)=>{
+            e.preventDefault();
+           
+            let height = parseInt(document.querySelector("#text").value);
+            let weight = parseInt(document.querySelector("#texts").value);
+            let res = document.querySelector(".res");
+            res.classList.add("res");
+
+            if(height === "" || height < 0 || isNaN(height)){
+                 res.innerText = `Please give Valid height`;
+                 res.style.color = "red";
+            }
+            else if(weight === "" || weight < 0 || isNaN(weight)){//weight != NaN
+                res.innerText = `please give Valid weight`;
+                res.style.color = "red";
+            }
+            else{
+                let bmi = (weight / ((height*height)/10000)).toFixed(2);
+                console.log(bmi);
+                res.innerText = `BMI is: ${bmi}`;
+                res.style.color = "green";
+            }
+    
+        })
+
+    </script>
+</body>
+</html>

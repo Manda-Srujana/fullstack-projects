@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HarryPotter</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    
+
+    <script>
+
+      // const url = "https://v2.jokeapi.dev/joke/Any?safe-mode";
+      // const url = "https://api.dictionaryapi.dev/api/v2/entries/en/digital";
+      const url = "https://robohash.org/onerobot.png";
+
+      async function getInfo(){
+       try{
+        // const config = {headers:{Accept: "application/json"}};
+        let res = await axios.get(url);
+        console.log(res);
+        // console.log(res.data);
+        // console.log(res.data.joke);
+        console.log(res.data);
+        // console.log(res.data.word);
+        // console.log(res.data.phonetics.audio);
+        
+       }
+       catch(e){
+         console.log(e);
+       }
+      }
+
+    </script>
+</body>
+</html>

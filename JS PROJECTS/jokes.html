@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random Jokes</title>
+  <style>
+    body{
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .container{
+        height:300px;
+        width:600px;
+        border: 10px solid black;
+        border-radius: 30px;
+        margin: 0 auto;
+        margin-top:80px;
+    }
+    button{
+        padding:10px;
+        border:none;
+        background-color: black;
+        color:white;
+        border-radius: 10px;
+        font-size: 22px;
+    }
+    #res{
+        margin:10px;
+        margin-top: 3px;
+    }
+
+  </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <div class="container">
+        <h1>Random Jokes</h1>
+        <button>Get Jokes</button><br><br><br>
+        <p id="res"></p>
+    </div>
+    <script>
+
+     const url = "https://icanhazdadjoke.com/";
+
+     let btn = document.querySelector("button");
+     let p = document.querySelector("#res");
+
+     btn.addEventListener("click",async ()=>{
+        console.log("btn was clicked");
+        let joke = await getJokes();
+        p.innerText = joke;
+     });
+     async function getJokes(){
+       try{
+         const config = {headers:{Accept:"application/json"}};
+         let res = await axios.get(url,config);
+        //  return res.data;
+        //  console.log(res.data);
+        //  console.log(res.data.joke);
+         return res.data.joke;
+       }
+       catch(e){
+        return "not found";
+       }
+    }
+
+    </script>
+</body>
+</html>

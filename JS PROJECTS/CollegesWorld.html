@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colleges in world</title>
+    <style>
+      body{
+        font-family: 'Times New Roman', Times, serif;
+      }
+      h1{
+        text-align: center;
+      }
+      .container{
+        width:500px;
+        border:2px solid black;
+        border-radius: 10px;
+        margin:10px auto;
+        margin-top:20px;
+      }
+      input{
+        margin-left: 25px;
+        width:70%;
+        padding: 10px;
+        border: 1px solid gray;
+        font-size: 20px;
+        border-radius: 10px;
+      
+      }
+      button{
+        text-align: center;
+        padding:10px;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 20px;
+        margin: 2px;
+      }
+      #list{
+        margin: 10px;
+      }
+      .space{
+        margin:1px;
+        font-size: 22px;
+      }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+   <div class="container">
+    <h1>Search Colleges in Country</h1>
+    <input type="text" placeholder="Enter Country" />
+    <button>Search</button>
+    <ul id="list"></ul>
+   </div>
+
+    <script>
+
+     let btn = document.querySelector("button");
+     let input = document.querySelector("input");
+     const url = "http://universities.hipolabs.com/search?name=";
+
+        btn.addEventListener("click", async () =>{
+        console.log("btn was clicked");
+        
+        let country = input.value;
+        let colArr = await  getColleges(country);
+        // console.log(colArr);
+
+        show(colArr);
+     });
+
+     function show(colArr){
+     
+      let list = document.querySelector("#list");
+      list.innerText = "";
+      for(col of colArr){
+        // console.log(col);
+        // console.log(col.name);
+
+        let li = document.createElement("li");
+        li.classList.add("space");
+        li.innerText = col.name;
+        list.appendChild(li);
+      }
+     }
+
+     async function getColleges(country){
+       try{
+        let res = await axios.get(url + country);
+        
+        // console.log(res);
+        // console.log(res.data);
+
+        return res.data;
+       }
+       catch(e){
+        console.log(e);
+        return [];
+       }
+     }
+
+    </script>
+</body>
+</html>
