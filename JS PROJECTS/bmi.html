@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+
+body{
+    margin: 0;
+    background: linear-gradient(to left bottom, lightgreen, lightblue);
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container{
+    background: rgba(255,255,255, .3);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0,0,0,.3);
+    margin: 5px;
+}
+
+.heading{
+    font-size: 30px;
+}
+
+.input{
+    padding: 10px 20px;
+    font-size: 18px;
+    background: rgba(255,255,255, .4);
+    border-color: rgba(255,255,255, .5);
+    margin: 10px;
+}
+
+.btn{
+    background-color: lightgreen;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 20px;
+    box-shadow: 0 0 4px rgba(0,0,0,.3);
+    cursor: pointer;
+}
+
+.btn:hover{
+    box-shadow: 0 0 8px rgba(0,0,0,.3);
+    transition: all 300ms ease;
+}
+
+.info-text{
+    font-size: 20px;
+    font-weight: 500;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Body Mass Index (BMI) Calculator</h1>
+        Your Height (cm):
+        <input type="number" class="input" id="height" value="180" placeholder="Enter your height in cm">
+        Your Weight (kg):
+        <input type="number" class="input" id="weight" value="80" placeholder="Enter your weight in kg">
+        <button class="btn" id="btn">Compute BMI</button>
+        <input disabled type="text" class="input" id="bmi-result">
+        <h4 class="info-text">Weight Condition: <span id="weight-condition"></span></h4>
+    </div>
+    <script>
+const btnEl = document.getElementById("btn");
+const bmiInputEl = document.getElementById("bmi-result");
+const weightConditionEl = document.getElementById("weight-condition");
+
+function calculateBMI() {
+  const heightValue = document.getElementById("height").value / 100;
+  const weightValue = document.getElementById("weight").value;
+
+  const bmiValue = weightValue / (heightValue * heightValue);
+
+  bmiInputEl.value = bmiValue;
+
+  if (bmiValue < 18.5) {
+    weightConditionEl.innerText = "Under weight";
+  } else if (bmiValue >= 18.5 && bmiValue <= 24.9) {
+    weightConditionEl.innerText = "Normal weight";
+  } else if (bmiValue >= 25 && bmiValue <= 29.9) {
+    weightConditionEl.innerText = "Overweight";
+  } else if (bmiValue >= 30) {
+    weightConditionEl.innerText = "Obesity";
+  }
+}
+
+btnEl.addEventListener("click", calculateBMI);
+    </script>
+</body>
+</html>

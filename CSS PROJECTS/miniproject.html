@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        #check{
+            display:none;
+        }
+        .container{
+            background: url("./photo.jpg");
+            background-size: cover;
+            height: 100vh;
+        }
+        .side-bar{
+           
+            position: fixed;
+            left:-300px;
+            background-color: rgba(255, 255, 255, 0.1);
+            width:300px;
+            height:100vh;
+            box-shadow: 0 0 6px rgba(255,255,255,0.5);
+        }
+        .btn-1{
+            line-height: 60px;
+            font-size: 30px;
+            color: white;
+            position: absolute;
+            left: 16px;
+        }
+        .btn-1:hover{
+            font-size: 33px;
+            cursor: pointer;
+        }
+        .btn-2:hover{
+          font-size: 32px;
+          cursor: pointer;
+        }
+        .side-bar{
+            transition:left 0.5s linear 0s;
+        }
+       
+        .side-bar .logo a{
+            color: white;
+            position: absolute;
+            box-shadow: 0 0 4px rgba(255,255,255,0.5);
+            
+            /* left:60px; */
+            width:100%;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 60px;
+            text-decoration: none;
+        }
+        .btn-2{
+            color: white;
+            font-size: 30px;
+            position: absolute;
+            left: 254px;
+            top: 16px;
+            opacity:0;
+        }
+        .menu{
+            margin-top: 63px;
+            width:100%;
+        }
+       .menu ul li{
+        width:100%;
+        list-style: none;
+        text-decoration: none;
+        color:white;
+       }
+       .menu ul li i{
+        font-size: 20px;
+        margin-left: 20px;
+         margin-right: 20px;
+         padding: 20px 10px;
+}
+       
+       .menu  li a{
+        text-decoration: none;
+        font-style: 20px;
+        color:white;
+       }
+       .menu ul li:hover{
+          box-shadow: 0 0 4px rgba(255,255,255,0.5);
+       }
+       .footer{
+        position: absolute;
+        left:80px;
+        bottom: 40px;
+       }
+       .footer ul i{
+        color:white;
+        opacity: 0.5;
+        font-size: 20px;
+       }
+       .footer ul i:hover{
+        opacity: 1;
+        font-size: 23px;
+        margin:4px;
+       }
+       #check:checked ~ .side-bar{
+        left:0;
+       }
+       #check:checked ~ .btn-1{
+        opacity:0;
+       }
+       #check:checked ~.side-bar .btn-2{
+        opacity: 1;
+       }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+      <input type="checkbox" id="check">
+      <div class="btn-1">
+        <label for="check">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+      </div>
+
+      <div class="side-bar">
+        <div class="logo">
+            <a href="#">Apna College</a>
+        </div>
+      <div class="btn-2">
+        <label for="check">
+            <i class="fa-solid fa-xmark"></i>
+        </label>
+      </div>
+     <div class="menu">
+        <ul>
+            <li>
+                <i class="fa-solid fa-house"></i>
+                <a href="#">home</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-arrow-up-short-wide"></i>
+                <a href="#">Shortcuts</a>
+            </li>
+            <li>
+                <i class="fa-brands fa-squarespace"></i>
+                <a href="#">Exhibits</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-calendar-days"></i>
+                <a href="#">Events</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-store"></i>
+                <a href="#">Store</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-address-book"></i>
+                <a href="#">Contact</a>
+            </li>
+            <li>
+                <i class="fa-regular fa-comment"></i>
+                <a href="#">Feedback</a>
+            </li>
+            </ul>
+     </div>
+     <div class="footer">
+        <ul>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </ul>
+     </div>
+      </div>
+   
+
+    
+    
+    </div>
+
+</body>
+</html>

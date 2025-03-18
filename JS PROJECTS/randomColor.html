@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color</title>
+    <style>
+     h1{
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+     }
+     button{
+        margin: 10px;
+        padding: 10px;
+
+     }
+     .box{
+        height:200px;
+        padding: 10px;
+        margin: 10px;
+        width:200px;
+        border-radius: 20px;
+        border: 1px solid black;
+     }
+    </style>
+</head>
+<body>
+    <button>Click me</button>
+    <h1></h1>
+  <div class="box"></div>
+  <script>
+    let btn = document.querySelector("button");
+    let h1 = document.querySelector("h1");
+    let box = document.querySelector(".box");
+    btn.addEventListener("click",()=>{
+        let random = randomColors();
+        h1.innerText = random;
+        box.style.backgroundColor = random;
+    });
+    function randomColors(){
+        let red = Math.floor(Math.random()*255);
+        let green = Math.floor(Math.random()*255);
+        let blue = Math.floor(Math.random()*255);
+        let total = `rgb(${red},${green},${blue})`;
+        return total;
+    }
+
+  </script>
+</body>
+</html>

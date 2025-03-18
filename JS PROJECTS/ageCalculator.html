@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>age Calculator</title>
+    <style>
+        .container{
+            height:400px;
+            font-family: 'Courier New', Courier, monospace;
+            width:600px;
+            margin: 6rem auto;
+            background-color: #5c040434;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            border-radius: 15px;
+            border: 2px solid #5c040434 ;
+        }
+        h1{
+            text-align: center;
+            font-weight: 700;
+            font-size: 45px;
+            margin: 20px;
+        }
+        h3{
+            text-align: center;
+            font-weight: 500;
+            font-size:25px;
+            margin: 10px;
+        }
+        #date{
+            border: none;
+            outline: none;
+            padding: 20px;
+            margin: 25px auto;
+            width:80%;
+            font-size: 20px;
+             display: flex;
+           align-items: center;
+           justify-content: center;
+            border-radius: 10px;
+        }
+        #btn{
+            font-size: 22px;
+            background-color: #1c1ccaa2;
+            color: white;
+            padding: 20px;
+            font-weight: 400px;
+            letter-spacing: 3px;
+            margin: 20px auto;
+            border: 2px solid #0000ff8e;
+            border-radius: 3px;
+            display: flex;
+           align-items: center;
+           justify-content: center;
+        }
+        button:hover{
+           opacity: 0.5;
+        }
+        #final{
+            font-weight: 600;
+            text-align: center;
+            margin:20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AGE CALCULATOR</h1>
+        <h3>Enter you date of birth</h3>
+        <label for="date">
+            <input type="date" placeholder="dd//mm//yyyy" id="date">
+        </label>
+        <button id="btn">Calculate</button>
+        <h2 id="final">Your age is 21 years old</h2>
+    </div>
+
+    <script>
+
+    const dateE1 = document.getElementById("date");
+    const buttonE1 = document.getElementById("btn");
+    const finalE1 = document.getElementById("final");
+
+
+    function calculateAge(){
+        const birthdayVal = dateE1.value;
+        if(birthdayVal === ""){
+            alert("Please enter your birthday");
+        }else{
+            const age = getValue(birthdayVal);
+           finalE1.innerText = `Your Age is ${age} ${age > 1 ? "years" : "year"} old`;
+           console.log(age);
+        }
+    }
+    function getValue(birthdayVal){
+        const currentDate = new Date();
+            const  birthdayDate = new Date(birthdayVal);
+            let age = currentDate.getFullYear() - birthdayDate.getFullYear();
+            const month = currentDate.getMonth() - birthdayDate.getMonth();
+
+           
+  if (
+    month < 0 ||
+    (month === 0 && currentDate.getDate() < birthdayDate.getDate())
+  ) {
+    age--;
+  }
+            return age;
+    }
+
+
+    buttonE1.addEventListener("click", calculateAge);
+
+    </script>
+</body>
+</html>
