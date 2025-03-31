@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USing Bootstrap</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link  rel ="stylesheet" href="style.css"/>
+    <link  rel = "stylesheet" href="media.css"/>
+
+</head>
+<body>
+     
+  <header class="container-fluid py-1 shadow-lg position-sticky top -0">
+    <div class="container">
+        <div class="row align-items-center">
+
+           <figure class="col-lg-6 m-0 p-0 col-12 col-lg-start text-lg-start text-center">
+            <img  class = "image" src="data:image/jpeg;base64,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5B133+9BWJJQ2SUt8J/M6iAHtDhokDf9VvrXLxtxSPsh0L701bwuQDQaXaO++/Kp5tOBuuWCIaAA0wdh2+5ejXj5dNY1vUuBDRsE+o+fzQQPD9u9fmimmnc6EwF0jdN0JCegbrrrW+/yUTZjjiu2rnJUa6PKDcm9Tu/V8rT6/V9an8bw9HRsQTGSN7oGFjCyBrHOB/eI/WP/ACpMU64mM3w8PjE7MgYA770Fcpy2Kk8L2Wf7PPkp4nQlo1r9Id77720LmlztxkF+SCxztGPltQF7W7aW9ug9Ovr7K4eBH03Gzo7mHl7H3+tamUKjBIGVYGiQEP1GPNvvv3QVzP5KziathzLhkmqwGxIHtY1pHsSfqIAC78WJBm8s19pzg2RhbEddAWDt6qVnpVrDw+evDI5oIBewEgHuOq9fDxeOZxGzxeXl5+Xza9toNoWURAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQf/9k=">
+           </figure>
+
+           <div class="col-lg-6">
+
+            <div class="outer d-flex gap-4 justify-content-end">
+                <button class = "btn btn-outline-success wat"> <i class="fa-brands fa-whatsapp"></i> Whatsup</button>
+                <button class = "btn btn-primary call"> <i class="fa-solid fa-phone"></i> Call us</button>
+            </div>
+           
+           </div>
+        </div>
+    </div>
+  </header>
+
+  <section class="container-fluid py-lg-6 py-sm-3 py-3 bg-white">
+    <div class="container">
+        <div class="row justify-content-between gy-4">
+
+            <div class="col-lg-6 ">
+             <div class="banner m-2">
+                <h1>Carrer Opportunities in <span class="text-primary">Digital Marketing</span></h1>
+                <p>Digital Marketing is so good just pay after your placement</p>
+                <ul class="icon">
+                  <li class ="mb-3"> <i class="fa-regular fa-square-check bg-primary"></i> Specialization: Performance Marketing</li>
+                  <li class ="mb-3"> <i class="fa-regular fa-square-check bg-primary"></i> Min Salary of 4.5 LPA</li>
+                  <li class ="mb-3"> <i class="fa-regular fa-square-check bg-primary"></i> 50 seats only</li>
+                </ul>
+                <div class=" py-1 d-flex gap-3 ">
+                  <button class ="btn btn-primary">Back 2-Days Demo</button>
+                  <button class="btn btn-outline-primary"> <i class="fa-solid fa-download"></i> Download circulum</button>
+                </div>
+             </div>
+            </div>
+
+            <div class="col-lg-5">
+              <form action = "" class="form">
+                <h3 class="text-primary">Book Your Classes Now</h3>
+               <p >2 days trail the classes worthy for money</p>
+
+               <div class="mb-3">
+                <label for="" class="form-label">Name</label>
+                <input type="text" class="form-control">
+               </div>
+
+               <div class="mb-3">
+                <label for="" class="form-label">Email</label>
+                <input type="text" class="form-control">
+               </div>
+
+               <div class="mb-3">
+                <label for="" class="form-label">Phone</label>
+               <div class="input-group">
+                <span class="input-group-text" id="basic-addon1">+91</span>
+                <input type="text" class="form-control" placeholder="Phone" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+
+              <div class="m-3">
+                <button class="btns">Register Now</button>
+               </div>
+
+
+              
+               
+              </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container shadow-lg mt-5">
+      <div class="p-4">
+        <div class="row row-cols-lg-5 row-col-1">
+          <div class="col">
+            <h1 class="text-primary">1000+</h1>
+            <p>students Trained</p>
+          </div>
+          <div class="col">
+            <h1 class="text-primary">1000+</h1>
+            <p>students Trained</p>
+          </div>
+          <div class="col">
+            <h1 class="text-primary">1000+</h1>
+            <p>students Trained</p>
+          </div>
+          <div class="col">
+            <h1 class="text-primary">1000+</h1>
+            <p>students Trained</p>
+          </div>
+          <div class="col">
+            <h1 class="text-primary">1000+</h1>
+            <p>students Trained</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

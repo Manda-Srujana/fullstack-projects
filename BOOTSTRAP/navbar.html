@@ -8,6 +8,123 @@
      
 </head>
 <body>
+
+     <!-- <h1>BREAK POINTS</h1> -->
+
+    <!-- 6 categories are divided , 
+    xxl = extra extra large = min =1400px (or) >= 1400px
+    xl = extra large = min =1200px (or) >= 1200px
+    lg = large = min = 992px (or) >= 992px
+    md = medium = min = 768px (or) >= 768px
+    sm = small = min = 576px (or) >= 576px
+    xs = extra  = min = 0px (or) >= 575px -->
+
+    <div class="text-lg-center">Welcome Bootstrap</div>
+    <!-- here,lg and xl  and xxl are applied to center
+    xs = sm = md = left -->
+    <div class = "text-md-center text-xl-end" >Welcome</div>
+    <!-- here, xs = sm = left and  md = lg = center and xl = xxl = end. -->
+    
+    <!--CONTAINERS-->
+
+    <!--
+       Conatiner-fluid = 100% in all screens
+       container = container-sm = 100% in small screen and rest of cases 540 720 960 1140 1320
+       container-md = 100% 100% 720 960 1140 1320
+       container-lg = 100% 100% 100% 960 1140 1320
+       container-xl = 100% 100% 100% 100% 1140 1320
+    -->
+    <div class="container-lg">Welcome</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">col</div>  
+            <div class="col-md-4">col</div>
+        </div>
+    </div>
+
+    <!--Example using AutoColumns -->
+    <div class="container-fluid py-5 bg-light">
+        <div class="container">
+
+            <div class="row text-center">
+                <div class="col-12">
+                    <h2>Quick Facts</h2>
+                </div>
+            </div>
+
+            <div class="row  row-cols-lg-5 row-cols-sm-2 row-cols-1">
+                <div class="col">
+                  <div class="bg-white text-center py-5">
+                    <h1>Home</h1>
+                    <p>Get into it</p>
+                  </div>
+                </div>
+                <div class="col">
+                    <div class="bg-white text-center py-5">
+                        <h1>Home</h1>
+                        <p>Get into it</p>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="bg-white text-center py-5">
+                        <h1>Home</h1>
+                        <p>Get into it</p>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="bg-white text-center py-5">
+                        <h1>Home</h1>
+                        <p>Get into it</p>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="bg-white text-center py-5">
+                        <h1>Home</h1>
+                        <p>Get into it</p>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="bg-white text-center py-5">
+                        <h1>Home</h1>
+                        <p>Get into it</p>
+                      </div>
+                </div>
+            </div>
+
+    <!-- Gutters it includes gx-0 and gy-0 which gy = top and bottom , gx = left and right where gx-1-2-3-4-5-6 where 2px 4px 8px 16px 24px. -->
+   
+    <div class="container">
+        <div class="row row-cols-lg-4 row-cols-sm-2 row-cols-1 gx-5 gy-3">
+            <div class="col">
+                <h2>Home</h2>
+                <p>get into it</p>
+            </div>
+            <div class="col">
+                <h2>Home</h2>
+                <p>get into it</p>
+            </div>
+            <div class="col">
+                <h2>Home</h2>
+                <p>get into it</p>
+            </div>
+            <div class="col">
+                <h2>Home</h2>
+                <p>get into it</p>
+            </div>
+            <div class="col">
+                <h2>Home</h2>
+                <p>get into it</p>
+            </div>
+            <div class="col">
+                <h2>Home</h2>
+                <p>get into it</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Margin and padding Here m-0,1,2,3,4,5 where 0 0.25rem = 4px 0.5rem = 8px 1rem = 16px 1.25rem = 24px 3rem = 48px we can uese m-lg-5 similarly padding to-->
+
+
     <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Navbar</a>
@@ -458,7 +575,37 @@
    </div>
 </div>
 
+<!--MODAL-->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Open modal for @fat</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Open modal for @getbootstrap</button>
 
+<div class="modal fade" id="exampleModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

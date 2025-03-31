@@ -1,0 +1,19 @@
+@media only screen and (min-width:200px) and (max-width:575px){
+     .outer{
+        position: fixed;
+        bottom: 0px;
+        width:100%;
+        left:0;
+        justify-content: center !important;
+     }
+     .banner h1{
+          font-size: 35px;
+          padding: 10px;
+     }
+}
+
+@media (min-width : 1400px){
+    .container, .container-lg, .container-md ,.container-sm,.container-xl,.container-xxl{
+        max-width: 1170px;
+    }
+}
